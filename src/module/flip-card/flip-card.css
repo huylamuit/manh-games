@@ -1,0 +1,52 @@
+.flip-card-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  min-height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  text-align: center;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    200px
+  ); /* Điều chỉnh để phù hợp với kích thước mới */
+  gap: 20px; /* Giữ khoảng cách hợp lý hơn */
+  width: fit-content;
+  justify-content: center;
+  border: 15px solid #eee9da;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: #eee9da;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.card.flipped {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.card-back {
+  font-size: 2rem;
+}
+
+.card-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}

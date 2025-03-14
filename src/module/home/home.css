@@ -1,0 +1,60 @@
+.home {
+  display: flex;
+  padding: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+
+  text-align: center;
+}
+
+.game-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  border: 12px solid #6096b4;
+  gap: 15px;
+  min-width: 60%;
+  overflow-x: auto;
+  border-radius: 24px;
+  height: 60vh;
+  padding: 18px;
+  align-content: flex-start;
+}
+
+.game-menu::-webkit-scrollbar {
+  width: 12px;
+  height: 4px;
+}
+
+.game-menu::-webkit-scrollbar-thumb {
+  background-color: #bdcdd6;
+  border-radius: 20px;
+}
+
+.game-menu::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.game-card {
+  text-decoration: none; /* Loại bỏ gạch chân */
+  color: inherit; /* Giữ màu chữ giống với thẻ div thông thường */
+  width: calc(25% - 15px);
+  min-width: 150px;
+  aspect-ratio: 1 / 1;
+  background-color: #eee9da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.game-card:hover {
+  background-color: #dfd3b5;
+}
