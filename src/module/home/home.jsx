@@ -4,6 +4,7 @@ import './home.css';
 function Home() {
     const GameList = [
         { name: 'Flip Card', url: '/flip-card' },
+        {name: 'Avoid Eggs', url:'/avoid-eggs'}
         
     ];
 
