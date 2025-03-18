@@ -92,7 +92,6 @@ function AvoidEggs() {
       if (!gameOver) {
         moveEggs();
         checkCollision();
-        updateSpeed();
       }
     }, 50);
 
