@@ -61,6 +61,10 @@ function MazeRunner() {
   const checkWin = ()=>{
     return player.x === destination.x && player.y === destination.y
   }
+  const restart = ()=>{
+    setPlayer(()=>{ return {x: 14, y: 0}})
+    setWin(false)
+  }
   useEffect(() => {
     const handleKeydown = (e) => moveCharacter(e);
     window.addEventListener("keydown", handleKeydown);
@@ -88,7 +92,7 @@ function MazeRunner() {
       )}
       {win && <div className="win-screen">
           <div className="manh-character"></div>
-          <div className="wall" style={{ width: CELL_SIZE, height: CELL_SIZE }}></div>
+          <div onClick={restart} className="wall" style={{ width: CELL_SIZE, height: CELL_SIZE }}></div>
           <div className="hlamb-character"></div>
       
         </div> }
