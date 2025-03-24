@@ -29,7 +29,7 @@ function AvoidEggs() {
   };
 
   const moveEggs = () => {
-    updateSpeed(); // Update speed before moving eggs
+    // updateSpeed(); // Update speed before moving eggs
 
     setEggs((prevEggs) => {
       return prevEggs
