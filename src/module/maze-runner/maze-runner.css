@@ -1,0 +1,57 @@
+.maze {
+  display: grid;
+  grid-template-columns: repeat(20, 32px);
+  grid-template-rows: repeat(20, 32px);
+}
+
+.cell {
+  box-sizing: border-box;
+}
+
+.wall {
+  background-image: url("../../../public/img/maze-runner/wall.png");
+}
+
+.path {
+  background-color: white;
+}
+
+.player {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../../public/img/avoid-eggs/manh.png");
+  background-size: contain;
+}
+
+.destination {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../../public/img/hlamb-pixel.png");
+  background-size: contain;
+}
+
+.win-screen {
+  display: flex;
+  width: 640px;
+  height: 320px;
+  background-color: #ff8d96;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+.manh-character {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../../public/img/avoid-eggs/manh.png");
+  background-size: contain;
+  margin-right: 15px;
+}
+
+.hlamb-character {
+  width: 128px;
+  height: 128px;
+  background-image: url("../../../public/img/hlamb-pixel.png");
+  background-size: contain;
+}

@@ -4,26 +4,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50vw;
 }
 
 .header {
   width: 100%;
-
   text-align: center;
+  paint-order: stroke fill;
 }
 
 .game-menu {
   display: flex;
   flex-wrap: wrap;
   margin-top: 12px;
-  border: 12px solid #6096b4;
+  border: 12px solid #a4b465;
   gap: 15px;
-  min-width: 60%;
+  min-width: 100%;
   overflow-x: auto;
   border-radius: 24px;
   height: 60vh;
   padding: 18px;
   align-content: flex-start;
+  background-color: #fefae0;
 }
 
 .game-menu::-webkit-scrollbar {
@@ -41,8 +43,8 @@
 }
 
 .game-card {
-  text-decoration: none; /* Loại bỏ gạch chân */
-  color: inherit; /* Giữ màu chữ giống với thẻ div thông thường */
+  text-decoration: none;
+  color: inherit;
   width: calc(25% - 15px);
   min-width: 150px;
   aspect-ratio: 1 / 1;

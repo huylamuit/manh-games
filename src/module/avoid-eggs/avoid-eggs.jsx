@@ -29,10 +29,12 @@ function AvoidEggs() {
   };
 
   const moveEggs = () => {
+    updateSpeed(); // Update speed before moving eggs
+
     setEggs((prevEggs) => {
       return prevEggs
-        .map((egg) => ({ ...egg, y: egg.y - eggSpeed }))
-        .filter((egg) => egg.y >= 0);
+        .map((egg) => ({ ...egg, y: egg.y - eggSpeed })) // Move egg
+        .filter((egg) => egg.y >= 0); // Remove eggs that went off-screen
     });
   };
 
@@ -53,23 +55,20 @@ function AvoidEggs() {
         setGameOver(true);
       }
 
-      if (egg.y === 50) {
+      // Increase score when egg reaches the bottom of the screen
+      if (egg.y <= 0) {
         updateScore();
       }
     });
   };
 
   const updateScore = () => {
-    setScore((prevScore) => {
-      const newScore = prevScore + 10;
-      return newScore;
-    });
+    setScore((prevScore) => prevScore + 10);
   };
 
   const updateSpeed = () => {
-    if (score % 100 === 0 && score > 0) {
-      let tempSpeed = eggSpeed;
-      setEggSpeed(tempSpeed + 1);
+    if (score % 20 === 0 && score > 0) {
+      setEggSpeed((prevEggSpeed) => prevEggSpeed + 1); // Increase egg speed
     }
   };
 
@@ -134,9 +133,8 @@ function AvoidEggs() {
           <div className="game-over">
             Điểm của em manh là: {score}
             <div>
-            <button onClick={restartGame}>Chơi lại</button>
+              <button onClick={restartGame}>Chơi lại</button>
             </div>
-              
           </div>
         )}
         <div className="game-ground"></div>
