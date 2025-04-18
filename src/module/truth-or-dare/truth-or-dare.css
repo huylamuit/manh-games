@@ -1,0 +1,52 @@
+.title {
+  width: 300px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+    -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+}
+.option {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 300px;
+  height: 350px;
+  background-color: #4074b5;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 24px;
+  font-size: 18px;
+
+  word-break: break-word; /* 👈 Quan trọng: cho phép bẻ từ */
+  overflow-wrap: break-word; /* 👈 Hỗ trợ thêm */
+  white-space: normal;
+}
+.button {
+  width: 144px;
+  height: 32px;
+  background-color: rgb(65, 163, 255);
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+
+  padding-top: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.button:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}

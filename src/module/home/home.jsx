@@ -6,10 +6,7 @@ function Home() {
         { name: 'Flip Card', url: '/flip-card' },
         {name: 'Avoid Eggs', url:'/avoid-eggs'},
         { name: 'Maze Runner', url: '/maze-runner' },
-      
-    
-
-
+        { name: 'Truth Or Dare', url: '/truth-or-dare' },
         
     ];
 
